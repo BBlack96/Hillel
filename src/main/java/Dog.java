@@ -40,23 +40,24 @@ public class Dog {
     public Dog(String name, String color, int age, int height) {
         this.name = name;
         this.color = color;
-        this.age = agevalidete(age);
-        this.height = heightalidate(height);
+        this.age = agevalidate(age);
+        this.height = heightvalidate(height);
     }
 
-    private int agevalidete(int age) {
-        if((age>=0) && (age<=20)){
+    private int agevalidate(int age) {
+        if ((age >= 0) && (age <= 20)) {
             return age;
         }
-        return 2;
+        return 1;
     }
 
-    private int heightalidate(int height) {
+    private int heightvalidate(int height) {
         if ((height >= 14) && (height <= 120)) {
             return height;
         }
         return 15;
     }
+    //Значения для проверок взяты приблизительно, мин/макс age и height
 
 
     public Dog(String name, String color) {
