@@ -40,9 +40,24 @@ public class Dog {
     public Dog(String name, String color, int age, int height) {
         this.name = name;
         this.color = color;
-        this.age = age;
-        this.height = height;
+        this.age = agevalidete(age);
+        this.height = heightalidate(height);
     }
+
+    private int agevalidete(int age) {
+        if((age>=0) && (age<=20)){
+            return age;
+        }
+        return 2;
+    }
+
+    private int heightalidate(int height) {
+        if ((height >= 14) && (height <= 120)) {
+            return height;
+        }
+        return 15;
+    }
+
 
     public Dog(String name, String color) {
         this.name = name;
@@ -66,7 +81,7 @@ public class Dog {
 //////////////////////////////Чуть ниже 2 объекта для проверки вывода информации в консоль/////////////////////////////
 
     public static void main(String[] args) {
-        Dog dog = new Dog("Bobik", "Gray", 5, 70);
+        Dog dog = new Dog("Bobik", "Gray", 5, 100);
         new Dog();
         dog.print();
         Dog dog1 = new Dog("Sharik", "White");
