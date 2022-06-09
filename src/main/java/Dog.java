@@ -72,24 +72,6 @@ public class Dog {
         System.out.println("\nCreating object of the class Dog.\n");
     }
 
-    public void print() {
-        System.out.println("Name: " + this.name);
-        System.out.println("Color: " + this.color);
-        System.out.println("Age: " + this.age);
-        System.out.println("Height: " + this.height);
-
-    }
-//////////////////////////////Чуть ниже 2 объекта для проверки вывода информации в консоль/////////////////////////////
-
-    public static void main(String[] args) {
-        Dog dog = new Dog("Bobik", "Gray", 5, 100);
-        new Dog();
-        dog.print();
-        Dog dog1 = new Dog("Sharik", "White");
-        new Dog();
-        dog1.print();
-    }
-
 }
 
 
