@@ -1,21 +1,32 @@
-public class Cat extends Animal {
-    private String color;
+public class Cat extends Animal implements Pet {
 
-    public String getColor() {
-        return color;
+
+    public Cat(String name) {
+        super(name);
+    }
+    @Override
+    void greets() {
+        System.out.println("Cat " + super.getName() + " says: Meow");
+
     }
 
-    public void setColor(String color) {
-        this.color = color;
+    @Override
+    public void feed() {
+        System.out.println("Feeding cat " + super.getName());
+
     }
 
-    public Cat(boolean vegetarian, String eats, int noOfLegs, String color) {
-        super(vegetarian, eats, noOfLegs);
-        this.color = color;
+    @Override
+    public void walk() {
+        System.out.println("Walking cat " + super.getName());
+
     }
 
-    public Cat(boolean vegetarian, String eats, int noOfLegs) {
-        super(vegetarian, eats, noOfLegs);
-        this.color = "White";
+    @Override
+    public void play() {
+        System.out.println("Playing with cat " + super.getName());
+
     }
+
+
 }

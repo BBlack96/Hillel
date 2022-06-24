@@ -1,77 +1,33 @@
-public class Dog {
-
-    private String name;
-    private String color;
-    private int age;
-    private int height;
-
-    public String getName() {
-        return name;
+public class Dog extends Animal implements Pet {
+    public Dog(String name) {
+        super(name);
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public int getHeight() {
-        return height;
-    }
-
-    public void setHeight(int height) {
-        this.height = height;
-    }
-
-    public Dog(String name, String color, int age, int height) {
-        this.name = name;
-        this.color = color;
-        this.age = agevalidate(age);
-        this.height = heightvalidate(height);
-    }
-
-    private int agevalidate(int age) {
-        if ((age >= 0) && (age <= 20)) {
-            return age;
-        }
-        return 1;
-    }
-
-    private int heightvalidate(int height) {
-        if ((height >= 14) && (height <= 120)) {
-            return height;
-        }
-        return 15;
-    }
-    //Значения для проверок взяты приблизительно, мин/макс age и height
-
-
-    public Dog(String name, String color) {
-        this.name = name;
-        this.color = color;
-        this.age = age;
-        this.height = height;
+    @Override
+    void greets() {
+        System.out.println("Dog " + super.getName() + " says: Woof");
 
     }
 
-    public Dog() {
-        System.out.println("\nCreating object of the class Dog.\n");
+    void greets(Dog another) {
+        System.out.println("Wooooof");
     }
 
+    @Override
+    public void feed() {
+        System.out.println("Feeding dog " + super.getName());
+
+    }
+
+    @Override
+    public void walk() {
+        System.out.println("Walking dog " + super.getName());
+
+    }
+
+    @Override
+    public void play() {
+        System.out.println("Playing with dog " + getName());
+
+    }
 }
-
-
