@@ -23,7 +23,7 @@ public enum Size {
         return length;
     }
     public String toString(){
-        return getName()+ " or " + super.toString() + " size: " + " width =  " + getWidth() + " length = "+ getLength();
+        return getName()+ " or " + super.toString() + " size: " + "width = " + getWidth() + ", length = "+ getLength();
 
     }
 }
